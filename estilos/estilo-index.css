@@ -22,22 +22,17 @@ body{
 }
 
 header{
-    background: url("../imagens/imagem-header02.jpg") no-repeat right;
-    background-size: contain; 
     background-color: #1E3D4F;
-    height: 160px;
     box-shadow: 1px 5px 9px 0px rgba(0, 0, 0, 0.404);
 }
 
-header > h1{
-    position: absolute;
-    left: 15%;
-
+header > h1{  
     color: #ffffff;
-    padding: 20px;
+    padding: 30px;
     font-family: "Roboto";
     font-size: 2.5em;
-    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    text-shadow: 0px 3px 1px #00000073;
 }
 
 main{

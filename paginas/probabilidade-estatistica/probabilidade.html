@@ -6,19 +6,9 @@
     <title>Probabilidade</title>
     <link rel="stylesheet" href="../../estilos/estilo-pglet.css">
     <style>
-        table{
-            max-width: 500px;
-            border-collapse: collapse;
-            margin: auto; 
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        th{
-            background-color: #a88b4d;
-        }
-        td, th{
-            border: 1px solid black;
-            padding: 10px;
+        span#prob{
+            font-size: 0.8em;
+            color: rgb(177, 162, 162);
         }
     </style>
 </head>
@@ -28,9 +18,10 @@
         <menu>
             <ul>
                 <li><a href="../principal/index.html">Menu</a></li>
-                <li><span id="seta">➭</span></li>
-                <li><a href="probest.html">Probabilidade</a></li>
-                <li></li>
+                <li><span class="seta">➭</span></li>
+                <li><a href="probest.html">Exatas</a></li>
+                <li><span class="seta">➭</span></li>
+                <li><span id="prob">Probabilidade</span></li>
             </ul>
         </menu>
     </header>
@@ -110,9 +101,9 @@
             <br> Um dado possuí 6 lados, com cada lado sendo enumerado de 1 à 6. Portanto, se torna impossível obter um número maior que 6.
         </p>
 
-        <p>
+         <div class="conf-video">
             <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/dbEsBe-wqco?si=4MH8p0iFIvJtjUhv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </p>
+        </div>
     </main>
 
     <footer>

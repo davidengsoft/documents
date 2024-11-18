@@ -10,8 +10,8 @@
     --cor01: #021b1a;
     --cor02: #136865;
     --cor03: ;
-    --cor04: #515a77bd;
-    --cor05: #B8B885;
+    --cor04: ;
+    --cor05: ;
 }
 
 body{
@@ -21,18 +21,14 @@ body{
    
 }
 
-header{
-    background-color: #1E3D4F;
-    box-shadow: 1px 5px 9px 0px rgba(0, 0, 0, 0.404);
-}
 
 header > h1{  
-    color: #af2a2a;
-    padding: 30px;
+    color: #94d9eb;
+    padding: 50px;
     font-family: "Roboto";
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
-    text-shadow: 0px 3px 1px #00000073;
+    text-shadow: 0px 3px 1px #00000073
 }
 
 main{

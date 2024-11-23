@@ -31,14 +31,16 @@ section > h2{
 
 div.container{
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 180px 180px;
     justify-content: space-between;
     
 }
 
 div.conteudos{
-  padding: 20px;
-
+    margin-top: 20px;
+    padding: 10px;
+    background-image: linear-gradient(to left, rgb(185, 185, 185), transparent)
+    
 }
 
 div.conteudos > a{

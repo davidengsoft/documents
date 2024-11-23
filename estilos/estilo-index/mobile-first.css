@@ -27,6 +27,7 @@ section#semestre-1{
 
 section > h2{
     text-align: center;
+    padding: 3px;
     margin-bottom: 15px;
     background-color: rgb(223, 223, 223);
 }

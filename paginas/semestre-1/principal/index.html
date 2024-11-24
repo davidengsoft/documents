@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     <link rel="stylesheet" href="../../../estilos/estilo-index/mobile-first.css">
     <link rel="stylesheet" href="../../../estilos/estilo-index/media.css" media="screen and (min-width: 768px)">
     <title>Document</title>
    
 </head>
     <header>
-        <h1>Engenharia de Software</h1>
-        <nav>
-            <a href=""></a>
+        <section class="conf-standbar">
+            <h1>Engenharia de Software</h1>
+            <span id="burger" class="material-symbols-outlined" onclick="clickmenu()">menu</span>
+        </section>
+            <form action="#" method="post">
+                <input type="text" name="pesq" id="ipesq" placeholder="Faça uma busca">
+            </form>
+        <nav id="menu">
+            <div id="tit-nav">Acesse cada periodo</div>
+            <ul>
+                <li><a href="#">1º Período</a></li>
+                <li><a href="#">2º Período</a></li>
+                <li><a href="#">3º Período</a></li>
+                <li><a href="#">4º Período</a></li>
+                <li><a href="#">5º Período</a></li>
+                <li><a href="#">6º Período</a></li>
+                <li><a href="#">7º Período</a></li>
+                <li><a href="#">8º Período</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -19,32 +37,33 @@
             <h2> Matérias por semestre</h2>
             <div class="container">
                 <div class="conteudo">
-                    <a href="#">1º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">5º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">2º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">6º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">3º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">7º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">4º Semestre</a>
                 </div>
                 <div class="conteudo">
-                    <a href="#">8º Semestre</a>
                 </div>
             </div>
         </section>
     </main>
-
+    
+    <script>
+        function clickmenu(){
+            if (menu.style.display == "block"){
+                menu.style.display = "none"
+            } else{
+                menu.style.display = "block"
+            }
+        }
+    </script>
 </body>
 </html>

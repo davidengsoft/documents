@@ -1,2 +1,30 @@
 @charset "UTF-8";
 
+header nav{
+    display: block;
+}
+
+header > nav >ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header #tit-nav{
+    display: none;
+}
+
+header > nav >ul > li{
+    display: flex;
+    align-items: center;
+
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 5px;
+
+    background-color: rgba(109, 109, 182, 0.541);
+}
+
+header > nav >ul > li > a{
+    font-size: 12px;
+    font-weight: bolder;
+}

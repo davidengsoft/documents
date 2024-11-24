@@ -78,7 +78,6 @@ header li:active{
     transform: translate(2px, 2px);
 }
 
-
 section#semestres{
     max-width: 850px;
     margin: auto;

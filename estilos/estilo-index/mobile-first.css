@@ -17,7 +17,7 @@ header > h1{
     text-align: center;
 }
 
-section#semestre-1{
+section#semestres{
     max-width: 850px;
     margin: auto;
     background-color: whitesmoke;
@@ -33,18 +33,17 @@ section > h2{
 }
 
 div.container{
+    margin: 10px;
+
     display: grid;
-
-    justify-content: center;
-    
+    grid-template-columns: repeat(2, 140px);
+    justify-content: space-between;
 }
 
-div.conteudos{
+div.conteudo{
+    margin: 10px;
     padding: 15px;
+    background-color:rgb(145, 145, 219);
 }
 
-div.conteudos > a{
-    color: rgb(25, 91, 94);
 
-    text-decoration: none;
-}

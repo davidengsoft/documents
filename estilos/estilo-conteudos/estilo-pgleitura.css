@@ -76,6 +76,11 @@ main > p{
     line-height: 2em;
 }
 
+main strong.destaque{
+    background-color: #dce9bd;
+    padding: 2px;
+}
+
 main > div.imagens{
     display: flex;
     justify-content: center;

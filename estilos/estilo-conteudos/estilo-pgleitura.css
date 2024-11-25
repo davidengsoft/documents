@@ -41,6 +41,7 @@ header > form > div.form > input.pesquisa{
 main{
     max-width: 900px;
     margin: auto;
+    padding: 10px;
     text-align: justify;
 }
 

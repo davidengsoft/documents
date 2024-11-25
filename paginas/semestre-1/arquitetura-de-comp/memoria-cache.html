@@ -3,23 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../../estilos/estilo-conteudos/estilo-pgleitura.css">
     <title>Memória Cache</title>
 </head>
 <body>
     <header>
-        Memória Cache
+        <section class="conf-standbar">
+            <h1>Arquitetura de Computadores</h1>
+            <span id="burger" class="material-symbols-outlined" onclick="clickmenu()">menu</span>
+        </section>
+        <form action="#" method="post">
+            <div class="form">
+                <input type="text" class="pesquisa" name="pesq" id="ipesq" placeholder="Faça uma busca">
+            </div>
+        </form>
     </header>
     <main>
-        <p>Pode-se dizer que o principal motivo da existência das memórias cache é o gap de velocidade entre a memória principal e o processador.</p>
+        <h1>Memória Cache</h1>
+        <p>
+            Pode-se dizer que o principal motivo da existência das memórias cache é o gap de velocidade entre a memória principal e o processador.
+        </p>
 
         <h2>Diferença de velocidade Processador/MP</h2>
-        <p>Esse problema trata da diferença entre o ciclo de tempo do processador e o ciclo de tempo da memória principal. Ou seja, a MP transfere bits para o processador em velocidades inferiores ás que o processador pode receber e operar os dados.</p>
+        <p>
+            Esse problema trata da diferença entre o ciclo de tempo do processador e o ciclo de tempo da memória principal. Ou seja, a MP transfere bits para o processador em velocidades inferiores ás que o processador pode receber e operar os dados.
+        </p>
 
-        <!-- Colocar imagem aqui -->
+        <div class="imagens">
+            <img  src="imagens/Captura de tela_11-11-2024_181320_.jpeg" alt="">
+        </div>
 
-        <p>A posibilidade de uso de vários programas (multiprogramação) torna esse problema mais perceptivel ainda. Já que, a manutenção da ocupação do processador é essencial para o aumento de desempenho do sistema e a veelocidade de transferência da MP tem papel relevante.</p>
+        <p>
+            A posibilidade de uso de vários programas (multiprogramação) torna esse problema mais perceptivel ainda. Já que, a manutenção da ocupação do processador é essencial para o aumento de desempenho do sistema e a veelocidade de transferência da MP tem papel relevante.
+        </p>
 
         <h2>Conceito de Localidade</h2>
+        <p>
+            O conceito de localida se baseia na função de agrupar pequenas partes do programa, que são acessadas com mais frequência, próximas ao processador. Assim, diminuindo o tempo de busca do processador.
+        </p>
+        <p>
+            Esse comportamento de programas em execução é conhecido como <strong>Princípio de Localidade</strong>. Existem dois príncipios, os quais possuem caracteerísticas distintas, são eles: localidade temporal e localidade espacial. 
+        </p>
+
+        <h3>Localidade Temporal</h3>
+        <p>
+            Os itens acessados recentemente provavelmente serão acessados novamente em breve. Por exemplo, instruçõe em loop.
+        </p>
+
+        <h3>Localidade Espacial</h3>
+        <p>
+            Itens que estão próximos aos acessados recentemente, provavelmente serão acessados em breve. Por exemplo, acesso sequêncial as instruções. 
+        </p>
+
+        <h2>Funcionamento da Memória Cache</h2>
+        <p>
+            A memória cache é organizada em <strong>blocos ou linhas</strong>, com cada bloco armazenando X bytes. Cada bloco na cache contem uma tag (identificador), que ajuda a determinar se o bloco específico de dados está na cache.
+        </p>
+        <p>
+            Para que um progama seja executado, o processador busca por instruções na memória da máquina. As buscas são iniciadas na memória cache, se o conteúdo estiver armazenado em algum endereço dessa memória ocorre um acerto (hit). Assim a instrução é transferida para o processador, em uma velocidade muita maior do que a MP conseguiria.
+        </p>
+        <p>
+            Por outro lado, a memória cache não contendo a instrução, ocorre o que é conhecido como <strong>falta (miss)</strong>. Nesse caso, o dado será buscado na MP e transferido para a cache, sendo armazenado em alguma linha da memória. Depois desse processo a instrução é tranferida ao processador
+        </p>
+        <p>
+            Para um bom desempenho do sistema é certo que ter mais acertos (hit) do que faltas (miss) é primordial. Uma forma de medir a eficiência da cache é atraves da relação entre acertos e o total de acessos. 
+            <br>
+            <strong>E = (hit / total de acessos) * 100</strong>
+            <br>
+            Sendo: E = eficiência da cache.
+        </p>
+        <p>
+            Exemplo: Se em 87 acessos ocorrem 83 acertos qual é a eficiência da cache?
+            <div>
+                <strong>Solução</strong>
+                <p>
+                    E = (83 / 87) * 100
+                    <br>
+                    E = (0,95) * 100
+                    <br>
+                    E = 95%
+                </p>
+            </div>
+        </p>
+
+        <h2>Mapeamento de dados</h2>
+        <p>
+            O mapeamento é essencial para determinar como os dados da MP serão transferidos para a cache. Os tipos de mapeamento são: mapeamento direto, mapeamento associativo e mapeamento associativo por conjunto.
+        </p>
+        <h3>Mapeamento Direto</h3>
+        <p>
+            Cada bloco da memória principal é mapeado para um <strong>bloco específico na cache</strong>. Simples e rápido, mas pode gerar muitos conflitos.
+        </p>
+        <p>
+            No mapeamento direto o processador, realizando cálculos, sabe exatamente para qual linha ele deve levar um determinado bloco da MP. Este cálculo realizado pela CPU determina que, a linha da cache é igual ao resto da divisão do nº de blocos da MP pelo nº de linhas da cache.
+        </p>
+        <div class="imagens">
+            <img src="imagens/form-mapdireto.png" alt="">
+        </div>
+        <p>
+            Suponha que o processador leu o bloco 1027 da MP e o nº de linhas da cache sendo 1KB linhas.
+
+            <div>
+                <strong>Solução</strong>
+                <p>
+                    linha cache =  mod (1027 / 1024)
+                    <br>
+                    linha cache = 3
+                    <br> 
+                </p>
+                <p>
+                    Dessa forma o processador irá armazenar o bloco da MP na linha 3 da memória cache.
+                </p>
+            </div>
+        </p>
+
+        <h3>Mapeamento Associativo</h3>
+        <p>
+            Qualquer bloco da MP pode ser armazenado em qualquer bloco da cache. Mais flexível, porém requer um hardware mais complexo. 
+        </p>
+
+        <h3>Mapeamento Associativo por Conjunto</h3>
+        <p>
+            A cache é dividida em conjuntos, onde, cada bloc da MP pode ser armazenado em qualquer bloco dentro de um conjunto epecífico. Esse mapeamento combina os benefício dos dois métodos anteriores, gerando um bom equilíbrio entre complexidade e eficácia. 
+        </p>
     </main>
 </body>
 </html>

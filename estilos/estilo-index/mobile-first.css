@@ -37,7 +37,7 @@ form{
     justify-content: center;
 }
 
-header input#ipesq{
+header input.pesquisa{
     padding: 15px;
     width: 95%;
 

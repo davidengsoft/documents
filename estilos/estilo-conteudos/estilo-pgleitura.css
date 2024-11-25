@@ -60,11 +60,12 @@ main > h1{
 main h2{
     margin-top: 35px;
     font-family: "Roboto";
-
+    text-align: left;
 }
 
 main > h3{
     margin-top: 30px;
+    text-align: left;
 }
 
 main p{

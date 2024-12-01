@@ -70,6 +70,8 @@ main > h3{
 
 main p{
     font-size: 1.1em;
+    line-height: 1.5em;
+
 }
 
 main > p{
@@ -78,9 +80,15 @@ main > p{
     font-size: 1.1em;
 }
 
+span.solucaoEx{
+    display: block;
+    margin-bottom: 5px;
+}
+
 main strong.destaque{
     background-color: #dce9bd;
-    padding: 2px;
+    padding: 3px;
+    border-radius: 2px;
 }
 
 main > div.imagens{

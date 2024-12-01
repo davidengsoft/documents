@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: rgb(236, 235, 235);
+}
+
+header{
+    padding: 15px 0px 5px 0px;
+    margin-bottom: 80px;
+    background-color: rgb(145, 145, 219);
+}
+
+section.conf-standbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+header input.pesquisa{
+    padding: 15px;
+    width: 95%;
+
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+header > nav{
+    display: none;
+}
+
+main > h2{
+    text-align: center;
+}
+
+main > section{
+    background: black;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section > h3{
+    margin: 0px 10px;
+    width: 100%;
+}
+
+section div.container{
+    padding: 10px ;
+}
+
+section div.card-materias{
+    background-color: white;
+    width: 235px;
+    height: 200px;
+
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+section div.conf-tt-conteudo{
+    margin-bottom: 20px;
+}
+
+section span.tt-conteudo{
+    background-color: rgb(223, 197, 247);
+    color: rgb(79, 16, 138);
+
+    border: 1px solid rgb(79, 16, 138);
+    border-radius: 1rem;
+    
+    font-size: 14px;
+    font-weight: bold;
+
+
+    padding: 5px;
+}
+
+section div.conf-apres{
+    font-size: 18px;
+    text-align: justify;
+}
